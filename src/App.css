@@ -19,13 +19,13 @@ p {
 .random i {
   vertical-align: middle;
   transform: rotate(0);
-  transition: transform 1s;
 }
 .random:hover {
   cursor: pointer;
 }
 .random:hover i {
   transform: rotate(180deg);
+  transition: transform 1s;
 }
 
 .author {
