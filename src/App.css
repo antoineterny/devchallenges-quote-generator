@@ -1,38 +1,96 @@
 .App {
-  text-align: center;
+  margin: 30px 100px;
+}
+p {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.random-row {
+  width: 100%;
+  overflow: hidden;
+}
+.random {
+  float: right;
+  font-family: "Libre Franklin", sans-serif;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 500;
+}
+.random i {
+  vertical-align: middle;
+  transform: rotate(0);
+  transition: transform 1s;
+}
+.random:hover {
+  cursor: pointer;
+}
+.random:hover i {
+  transform: rotate(180deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.author {
+  max-width: 640px;
+  margin: 50px auto 0;
+  font-family: "Libre Franklin", sans-serif;
+  color: #333333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.quote {
+  max-width: 640px;
+  margin: 5em auto;
+  position: relative;
+}
+.quote-text {
+  position: relative;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #111111;
+  margin-top: 8px;
+}
+.quote-text::before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  background-color: #f7df94;
+  position: absolute;
+  left: -100px;
+  top: 0;
+}
+.quote-author {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4f4f4f;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.quote-genre {
+  font-size: 14px;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  color: #828282;
+}
+
+.quote-details {
+  padding: 50px 30px;
+  margin-left: -30px;
+  margin-top: 100px;
+  position: relative;
+}
+.quote-details:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+.quote-details:hover > * {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-details i.material-icons {
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 12px);
+  color: white;
 }
